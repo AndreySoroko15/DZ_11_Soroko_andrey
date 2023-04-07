@@ -1,4 +1,4 @@
-document.write (`1. Выведите числа от 1 до 50 и от 35 до 8. <hr>`)
+/*document.write (`1. Выведите числа от 1 до 50 и от 35 до 8. <hr>`)
 
 for (let i = 1; i <= 50; i++) document.write(`${i} `);
 document.write(`<hr>`);
@@ -105,3 +105,38 @@ while(true) {
     break;
   } 
 }
+*/
+
+/*
+
+*/
+
+/*
+// Задание 10
+document.write(`<br><br> 10. Дано произвольное целое число n. Написать программу, которая:
+a. разбивает число n на цифры и выводит их на экран;
+b. подсчитывает сколько цифр в числе n;
+c. находит сумму цифр числа n;
+d. меняет порядок цифр числа n на обратный. <br/>`); 
+
+function numb(n) {
+  n = String(n);
+  let output = '',
+      numberOfNumbers,
+      sumOfDigits = 0,
+      reverse = '';
+  for (let i = 0; i < n.length; i++) {
+    output = output + n[i] + ' ';
+
+    numberOfNumbers = 1;
+    numberOfNumbers += i; // можно было присвоить переменной numberOfNumbers значение длины n, но сделал через количество циклов  для понимания
+
+    sumOfDigits += +n[i];
+
+    reverse = reverse + n[n.length-1 - i]; // 1-й цикл: длина 2-1-0 = 1, вывожу первый индекс, 2 цикл длина 2-1-1 = 0, вывожу нулевой индекс
+  } 
+  return (`Число ${n}: <br> Состоит из цифр: ${output} <br> Количество цифр: ${numberOfNumbers} <br> Сумма цифр: ${sumOfDigits} <br> В обратном порядке: ${reverse}`)
+}
+document.write(numb(567));
+
+*/
